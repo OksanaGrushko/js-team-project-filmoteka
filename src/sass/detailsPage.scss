@@ -1,0 +1,108 @@
+$base-color: #addad6;
+.main-detailsPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    @media (min-width: 320px) {
+        width: 274px;
+    }
+    @media (min-width: 768px) {
+        width: 720px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media (min-width: 1024px) {
+        width: 915px;
+        padding: 25px 0;
+    }
+    &__imgWrap {
+        background-color: rgba($base-color, $alpha: 0.3);
+        height: 400px;
+        @media (min-width: 768px) {
+            height: 526px;
+        }
+        @media (min-width: 1024px) {
+            height: 630px;
+        }
+    }
+    &__img {
+        width: 274px;
+        display: block;
+        height: auto;
+        @media (min-width: 768px) {
+            width: 358px;
+        }
+        @media (min-width: 1024px) {
+            width: 428px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) {
+            width: 340px;
+        }
+        @media (min-width: 1024px) {
+            width: 451px;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+    &__table {
+        width: 274px;
+        margin-bottom: 30px;
+        &__row:nth-child(even) {
+            background-color: $base-color;
+        }
+    }
+    &__table td {
+        padding: 5px 15px;
+    }
+    &__about {
+        margin-bottom: 15px;
+        align-self: start;
+        &__text {
+            margin-bottom: 20px;
+        }
+    }
+    &__btnList {
+        display: flex;
+        align-self: flex-start;
+        margin-bottom: 20px;
+    }
+    &__btnItem {
+        position: relative;
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    &__btnItem button {
+        background-color: transparent;
+        padding: 5px 10px 5px 30px;
+        border-radius: 15px;
+        border: 1px solid transparent;
+        outline: none;
+        &:hover {
+            border-radius: 15px;
+            border: 1px solid $base-color;
+            cursor: pointer;
+        }
+    }
+    &__btnIcon {
+        position: absolute;
+        z-index: -1;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

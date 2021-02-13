@@ -1,1 +1,1 @@
-# js-team-project-filmoteka
+https://romanpidlisnychyi.github.io/js-team-project-filmoteka/build/

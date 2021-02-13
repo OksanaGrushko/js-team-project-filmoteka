@@ -1,0 +1,49 @@
+        <section class="detailsPage">
+            <div class="detailsPage__imgWrap">
+                <img class="detailsPage__img" src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}}" />
+            </div>
+            <div class="detailsPage__content">
+                <h2 class="detailsPage__title">{{title}}</h2>
+                <table class="detailsPage__table">
+                    <tr class="detailsPage__table__row">
+                        <td >release date</td>
+                        <td>{{release_date}}</td>
+                    </tr>
+                    <tr class="detailsPage__table__row">
+                        <td >vote</td>
+                        <td>{{vote_average}}</td>
+                    </tr>
+                    <tr class="detailsPage__table__row">
+                        <td>popularity</td>
+                        <td>{{popularity}}</td>
+                    </tr>
+                    <tr class="detailsPage__table__row">
+                        <td>original title</td>
+                        <td>{{title}}</td>
+                    </tr>
+                    <tr class="detailsPage__table__row">
+                        <td>genre</td>
+                        <td>{{#each genres}}
+                            {{this.name}}
+                            {{/each}}
+                        </td>
+                    </tr>
+                </table>
+                <h3 class="detailsPage__about">About</h2>
+                <p class="detailsPage__about__text">{{overview}}</p>
+                <ul class="detailsPage__btnList">
+                    <li class="detailsPage__btnItem">
+                        <div class="detailsPage__btnIcon">
+                            <i class="fa fa-video-camera" aria-hidden="true" style="color:#addad6; font-size: 18px;"></i>
+                        </div>
+                        <button class="detailsPage__btnAddFavorite">Add to queue</button>
+                    </li>
+                    <li class="detailsPage__btnItem">
+                        <div class="detailsPage__btnIcon">
+                            <i class="fa fa-calendar-plus-o" aria-hidden="true" style="color:#addad6; font-size: 18px;"></i>
+                        </div>
+                        <button class="detailsPage__btnAddWatched"></i>Add to watched</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
